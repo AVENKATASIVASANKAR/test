@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .example{
+        display:none;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="example"> hello world</h1>
+    <h1 class="example"> hello world</h1>
+    <h1 class="example"> hello world</h1>
+    <button type="submit"onclick=javascript:button()>add</button>
+    <button type="submit"onclick=javascript:button2()>remove</button>
+    <p id="demo">1</p>
+    <p id="demo1">1</p>
+   <script>
+    function button(){
+const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  if (i % 2 === 0) {
+    nodeList[i].style.color = "green";
+    nodeList[i].style.display="block"
+    
+  } else {
+    nodeList[i].style.color = "red";
+    nodeList[i].style.display="block"
+  }
+}
+    }
+    
+
+
+
+    function button2(){
+    const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  if (i % 2 === 0) {
+    nodeList[i].style.color = "green";
+    nodeList[i].style.display="none"
+    
+  } else {
+    nodeList[i].style.color = "red";
+    nodeList[i].style.display="none"
+  }
+}
+    }
+
+
+    
+
+
+    setInterval(displayHello, 1000);
+
+function displayHello() {
+  
+     
+
+    var timer=setInterval(function(){
+    var today=new Date();
+    var hours=today.getHours();
+    var minutes=today.getMinutes();
+    var seconds=today.getSeconds();
+    var time=today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+    document.getElementById("demo").innerHTML=today.toLocaleString();
+    document.getElementById('demo1').innerHTML=time;
+
+
+
+    const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  if (i % 2 === 0 && seconds %2===0 ) {
+    nodeList[i].style.color = "green";
+    nodeList[i].style.display="none"
+    
+  } else if(i%2==0 && seconds %2!==0) {
+    nodeList[i].style.color = "red";
+    nodeList[i].style.display="none"
+  }
+}
+  },1000);
+
+
+    
+       }
+
+
+
+
+   </script>
+</body>
+</html>
+
+
+
+
+
+<!-- const nodeList = document.querySelectorAll(".example");
+for (let i = 0; i < nodeList.length; i++) {
+  if (i % 2 === 0) {
+    nodeList[i].style.color = "green";
+  } else {
+    nodeList[i].style.color = "red";
+  }
+} -->
+
+
+
+
+
+
+
+
+
+
+
+
